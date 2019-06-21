@@ -1,0 +1,9 @@
+*.com
+*.idea
+*.dll
+*.exe
+*.o
+*.so
+*.iml
+out/
+.idea/
