@@ -1,8 +1,6 @@
 package com.company;
 
-import java.awt.*;
-import java.awt.print.Book;
-import java.security.Key;
+
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -15,9 +13,9 @@ public class Books {
 
     private String Code, Category, Class, Name,Key,BorrowDate,ReverseDate,UserBorrow,Status;
 
-    public Books() {
-        demoArraylist();
-    }
+//    public Books() {
+//        demoArraylist();
+//    }
 
     public Books(String code, String category, String aClass, String name, String key, String borrowDate, String reverseDate, String userBorrow, String status) {
 
@@ -242,7 +240,7 @@ public class Books {
                 System.out.println("Do you want to Reverse this book ?\n" +
                         "Key : Y=Yes ; N=No ");
                 String s1 = input.nextLine();
-                if (s1.equals("N")) {
+                if (s1.equals("Y")) {
                     int inD = SearIndex(menus, keysQuery);
                     menus.get(inD).setStatus("N");
                     menus.get(inD).setReverseDate(dateFormat.format(new Date()));

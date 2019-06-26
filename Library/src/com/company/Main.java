@@ -18,14 +18,7 @@ public class Main {
         user.add(new User("Wisoot","Admin"));
         user.add(new User("Tanaphom","User"));
         user.add(new User("Ilada","User"));
-
-
         Start ();
-
-
-
-
-
     }
 
     public static void Start (){
@@ -45,48 +38,7 @@ public class Main {
                 Start();
             } else {
                 showMenuUser();
-                input = scan.nextInt();
-                switch (input) {
-                    case 1:
-                        //System.out.println("Entry BookId");
-                        //input = scan.nextInt();
-                        Books.BorrowBook();
-                        //showMenuUser();
-                        input = scan.nextInt();
-                        if (input == 1) {
-                            Books.BorrowBook();
-                           // showMenuUser();
-                        } else if (input == 2) {
-                            Books.Reverse();
-                        } else if (input == 3) {
-                            Start();
-                        } else {
-                            Start();
-                        }
-                        break;
-                    case 2:
-                        Books.Reverse();
-                        //showMenuUser();
-                        input = scan.nextInt();
-                        if (input == 1) {
-                            Books.BorrowBook();
-                           // showMenuUser();
-                        } else if (input == 2) {
-                            Books.Reverse();
-                        } else if (input == 3) {
-                            Start();
-                        } else {
-                            Start();
-                        }
-                        break;
-                    case 3:
-                        Start();
-                        break;
-                        default:
-                }
-
             }
-
         } else if (number == 2){
             headMenu();
             Books.ShowAllBook();
@@ -116,6 +68,38 @@ public class Main {
         System.out.println("1 Borrow Book");
         System.out.println("2 Return Book");
         System.out.println("3 Main Menu");
+
+        int inputMenu = scan.nextInt();
+        switch (inputMenu) {
+            case 1:
+                Books.BorrowBook();
+                if (inputMenu == 1) {
+                    Books.BorrowBook();
+                } else if (inputMenu == 2) {
+                    Books.Reverse();
+                } else if (inputMenu == 3) {
+                    Start();
+                } else {
+                    Start();
+                }
+                break;
+            case 2:
+                Books.Reverse();
+                if (inputMenu == 1) {
+                    Books.BorrowBook();
+                } else if (inputMenu == 2) {
+                    Books.Reverse();
+                } else if (inputMenu == 3) {
+                    Start();
+                } else {
+                    Start();
+                }
+                break;
+            case 3:
+                Start();
+                break;
+            default:
+        }
 
     }
     public static void headMenu(){
